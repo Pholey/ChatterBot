@@ -1,4 +1,5 @@
 from .logic import LogicAdapter
+from fuzzywuzzy import process
 
 
 class ClosestMatchAdapter(LogicAdapter):
@@ -8,7 +9,6 @@ class ClosestMatchAdapter(LogicAdapter):
         Takes a statement string and a list of statement strings.
         Returns the closest matching statement from the list.
         """
-        from fuzzywuzzy import process
 
         # Check if an exact match exists
         if text in list_of_statements:
