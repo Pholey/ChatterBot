@@ -20,7 +20,6 @@ class MongoDatabaseAdapter(DatabaseAdapter):
         pass
 
     def find(self, statement):
-    #def find(self, key):
         return statements.find_one(statement)
 
     def insert(self, key, values):
@@ -44,7 +43,7 @@ class MongoDatabaseAdapter(DatabaseAdapter):
 
         return values
 
-    def keys(self):
+    def _keys(self):
         # The value has to be cast as a list for Python 3 compatibility
         return list(self.database[0].keys())
 

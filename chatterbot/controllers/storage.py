@@ -5,7 +5,12 @@ class StorageController(object):
 
     def __init__(self, adapter, database_name):
 
-        StorageAdapter = import_module(adapter)
+        if (type(adapter) == str):
+            StorageAdapter = import_module(adapter)
+        else:
+            StorageAdapter = adapter
+
+        import ipdb; ipdb.set_trace()
         self.storage_adapter = StorageAdapter(database_name)
 
         self.recent_statements = []
