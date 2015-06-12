@@ -10,7 +10,6 @@ class StorageController(object):
         else:
             StorageAdapter = adapter
 
-        import ipdb; ipdb.set_trace()
         self.storage_adapter = StorageAdapter(database_name)
 
         self.recent_statements = []

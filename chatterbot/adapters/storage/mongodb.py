@@ -16,7 +16,7 @@ statements = db['statements']
 
 class MongoDatabaseAdapter(DatabaseAdapter):
 
-    def __init__(self, **kwargs):
+    def __init__(self, *args, **kwargs):
         pass
 
     def find(self, statement):
